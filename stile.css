@@ -2,6 +2,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+}
+
+html, body{
+  overflow-x: hidden;
 }
 
 body{
@@ -15,6 +20,97 @@ body{
 
 .hero-page{
       background-color: #E1FF8F;
+}
+
+.hero-page__vector-big{
+border-width: 1px;
+opacity: 1;
+   position: fixed; 
+  right: 0;
+  top: 0;  
+  z-index: 1; 
+
+}
+
+.hero-page__vector-wand1{
+border-width: 1px;
+opacity: 1;
+position: fixed; 
+top: 0px;
+left: 1330px;
+z-index: 1; 
+}
+
+.hero-page__vector-wand2{
+border-width: 1px;
+opacity: 1;
+position: fixed; 
+top: 254px;
+left: 1540px;
+z-index: 1; 
+}
+
+.hero-page__vector-wand3{
+border-width: 1px;
+opacity: 1;
+position: fixed; 
+top: 400px;
+left: 1690px;
+z-index: 1; 
+}
+
+.hero-page__vector-wand4{
+border-width: 1px;
+opacity: 1;
+position: fixed; 
+top: 740px;
+left: 1810px;
+z-index: 1; 
+}
+
+.hero-page__vector-triangle{
+border-width: 1px;
+opacity: 1;
+position: fixed; 
+top: 510px;
+left: 1697px;
+z-index: 1; 
+}
+
+.hero-page__vector-star_green1{
+top: 621px;
+left: 1410px;
+border-width: 1px;
+opacity: 1;
+position: fixed; 
+z-index: 1; 
+}
+
+.hero-page__vector-star_none1{
+top: 651px;
+left: 1466px;
+border-width: 1px;
+opacity: 1;
+position: fixed; 
+z-index: 1; 
+}
+
+.hero-page__vector-star_green2{
+top: 94px;
+left: 290px;
+border-width: 1px;
+opacity: 1;
+position: fixed; 
+z-index: 1; 
+}
+
+.hero-page__vector-star_none2{
+top: 69px;
+left: 383px;
+border-width: 1px;
+opacity: 1;
+position: fixed; 
+z-index: 1; 
 }
 
 .header{
@@ -73,6 +169,9 @@ body{
     text-align: center;
 }
 .header-strip{
+       position: fixed;
+     z-index: 2;
+         top: 600px;
      margin-top: 193px;
      width: 3220px;
      height: 90px;
