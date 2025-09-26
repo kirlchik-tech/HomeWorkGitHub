@@ -210,7 +210,37 @@ z-index: 1;
 .main{
   padding-top: 174px;
   background: #202027;
+   position: relative;
 }
+
+
+.game__img-1{
+  top: 195px;
+  left: 1240px;
+  opacity: 1;
+  position: absolute; 
+  z-index: 1; 
+}
+
+.game__img-2{
+  top:922px;
+  left: 270px;
+  opacity: 1;
+  border-width: 1px;
+ position: absolute; 
+  z-index: 1; 
+}
+
+.game__img-3{
+  top: 870px;
+  left: 255px;
+  opacity: 1;
+  border-width: 1px;
+  position: absolute; 
+  z-index: 1; 
+
+}
+
 .game-tittle{
   display: flex;
   flex-direction: row;
@@ -235,24 +265,90 @@ z-index: 1;
    line-height: 32px;
    letter-spacing: 0px;
    text-align: left;
-
+  margin-bottom: 72px;
 }
 
-.icon-item{
-  width: 378px;
-height: 473px;
-opacity: 1;
-border-radius: 30px;
-background: #FFFFFF;
+.icons{
+  display: grid;
+  grid-template-columns: repeat(3, 378px);
+  gap: 32px;
+  grid-auto-flow: dense;
+  position: relative;
+  z-index: 2; /* Иконки поверх картинки */
+}
 
+.icon-items, .icon-item_big {
+  opacity: 1;
+  border-radius: 30px;
+  background: #FFFFFF;
+}
+
+.icon-items{
+  height: 512px;
 }
 
 .icon-item_big{
-width: 378px;
-height: 512px;
-opacity: 1;
-border-radius: 30px;
-background: #FFFFFF;
+  height: 551px;
+   grid-row: span 1;
+}
+
+.icon-item_big:nth-child(4),
+.icon-item_big:nth-child(6) {
+  margin-top: -39px;
+}
+
+.icon-item__description{
+  padding-top: 32px;
+  padding-left: 32px;
+}
+
+.icon-item__texts{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 16px 10px 16px;
+  border-radius: 52.58px;
+  background: rgba(247, 247, 247, 1);
+}
+
+.icon-item__texts-1{
+  width: 108px;
+  height: 36px;
+}
+
+.icon-item__texts-2, .icon-item__texts-3, .icon-item__texts-5{
+  width: 111px;
+  height: 36px;
+}
+
+.icon-item__texts-4, .icon-item__texts-6{
+  width: 112px;
+  height: 36px;
+}
 
 
+.icon-item__text{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  color: rgba(32, 32, 39, 1);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.icon-item__title{
+  padding-top: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(32, 32, 39, 1);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: left;
 }
