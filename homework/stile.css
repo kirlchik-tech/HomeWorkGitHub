@@ -11,6 +11,7 @@ html, body{
 
 body{
     font-family:"Montserrat", serif;
+    position: relative;
 }
 
 .center {
@@ -20,12 +21,14 @@ body{
 
 .hero-page{
       background-color: #E1FF8F;
+      position: relative;
+
 }
 
 .hero-page__vector-big{
 border-width: 1px;
 opacity: 1;
-   position: fixed; 
+   position: absolute; 
   right: 0;
   top: 0;  
   z-index: 1; 
@@ -35,7 +38,7 @@ opacity: 1;
 .hero-page__vector-wand1{
 border-width: 1px;
 opacity: 1;
-position: fixed; 
+position: absolute; 
 top: 0px;
 left: 1330px;
 z-index: 1; 
@@ -44,7 +47,7 @@ z-index: 1;
 .hero-page__vector-wand2{
 border-width: 1px;
 opacity: 1;
-position: fixed; 
+position: absolute; 
 top: 254px;
 left: 1540px;
 z-index: 1; 
@@ -53,7 +56,7 @@ z-index: 1;
 .hero-page__vector-wand3{
 border-width: 1px;
 opacity: 1;
-position: fixed; 
+position: absolute; 
 top: 400px;
 left: 1690px;
 z-index: 1; 
@@ -62,7 +65,7 @@ z-index: 1;
 .hero-page__vector-wand4{
 border-width: 1px;
 opacity: 1;
-position: fixed; 
+position: absolute; 
 top: 740px;
 left: 1810px;
 z-index: 1; 
@@ -71,7 +74,7 @@ z-index: 1;
 .hero-page__vector-triangle{
 border-width: 1px;
 opacity: 1;
-position: fixed; 
+position: absolute; 
 top: 510px;
 left: 1697px;
 z-index: 1; 
@@ -82,7 +85,7 @@ top: 621px;
 left: 1410px;
 border-width: 1px;
 opacity: 1;
-position: fixed; 
+position: absolute; 
 z-index: 1; 
 }
 
@@ -91,7 +94,7 @@ top: 651px;
 left: 1466px;
 border-width: 1px;
 opacity: 1;
-position: fixed; 
+position: absolute; 
 z-index: 1; 
 }
 
@@ -100,7 +103,7 @@ top: 94px;
 left: 290px;
 border-width: 1px;
 opacity: 1;
-position: fixed; 
+position: absolute; 
 z-index: 1; 
 }
 
@@ -109,13 +112,15 @@ top: 69px;
 left: 383px;
 border-width: 1px;
 opacity: 1;
-position: fixed; 
+position: absolute; 
 z-index: 1; 
 }
 
 .header{
   width: 1440px;
   height: 800px;
+  position: relative;
+  z-index: 2;
 }
 .header-text{
     padding-top: 196px;
@@ -169,7 +174,7 @@ z-index: 1;
     text-align: center;
 }
 .header-strip{
-       position: fixed;
+       position: absolute;
      z-index: 2;
          top: 600px;
      margin-top: 193px;
@@ -200,4 +205,54 @@ z-index: 1;
    letter-spacing: 4%;
    text-align: left;
    text-transform: uppercase;
+}
+
+.main{
+  padding-top: 174px;
+  background: #202027;
+}
+.game-tittle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: left;
+
+}
+
+.game-text{
+  padding-top: 24px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   color: rgba(255, 255, 255, 1);
+   font-size: 24px;
+   font-weight: 400;
+   line-height: 32px;
+   letter-spacing: 0px;
+   text-align: left;
+
+}
+
+.icon-item{
+  width: 378px;
+height: 473px;
+opacity: 1;
+border-radius: 30px;
+background: #FFFFFF;
+
+}
+
+.icon-item_big{
+width: 378px;
+height: 512px;
+opacity: 1;
+border-radius: 30px;
+background: #FFFFFF;
+
+
 }
