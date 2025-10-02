@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -211,7 +210,7 @@ body {
 }
 
 .main {
-  padding-top: 174px;
+  padding-top: 94px;
   background: #202027;
   position: relative;
   padding-bottom: 144px;
@@ -328,7 +327,7 @@ body {
 }
 .icon-item_mini:hover, .icon-item_medium:hover, .icon-item_big:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgb(0, 0, 0);
   z-index: 10;
 }
 .icon-item_big:nth-child(4), .icon-item_big:nth-child(6) {
@@ -420,15 +419,19 @@ body {
   margin-bottom: 32px;
   gap: 32px;
 }
+.card-item__img-mobile {
+  display: none;
+}
 .card-items:nth-child(6) {
   margin-bottom: 0px;
 }
 .card-item__img {
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   flex-shrink: 0;
 }
-.card-item__img:nth-child(2n) {
+.card-item__img:nth-child(3n) {
   position: relative;
   left: 64px;
 }
@@ -473,7 +476,7 @@ body {
   gap: 10px;
   padding: 16px 28px;
   border-radius: 60px;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
   font-size: 24px;
@@ -572,7 +575,7 @@ body {
   }
   .header-info {
     width: 100%;
-    height: auto; /* Автоматическая высота */
+    height: auto;
     color: rgb(32, 32, 39);
     font-size: 16px;
     line-height: 100%;
@@ -580,7 +583,7 @@ body {
     text-align: center;
   }
   .header-button {
-    width: 100%; /* Кнопка на всю ширину */
+    width: 100%;
     width: 285;
     height: 55;
     border-width: 1px;
@@ -626,47 +629,119 @@ body {
     vertical-align: middle;
     text-transform: uppercase;
   }
-  /* Исправляем сетку карточек для мобилки */
   .icon {
-    grid-template-columns: 1fr; /* Одна колонка вместо трёх */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
-  .icon-item_mini,
-  .icon-item_medium,
-  .icon-item_big {
-    width: 100%; /* Карточки на всю ширину */
-    height: auto; /* Автоматическая высота */
-    min-height: 200px; /* Минимальная высота */
+  .icon-item_mini, .icon-item_medium, .icon-item_big {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
   }
-  /* Убираем специфичные отступы для больших карточек */
-  .icon-item_big:nth-child(4),
-  .icon-item_big:nth-child(6) {
+  .icon-item_big:nth-child(4), .icon-item_big:nth-child(6) {
     margin-top: 0;
   }
-  /* Уменьшаем размеры текста в карточках */
   .icon-item__title {
     font-size: 24px;
   }
   .icon-item__text {
     font-size: 14px;
   }
-  /* Исправляем основной контент */
   .main {
-    padding-top: 80px; /* Уменьшаем отступ */
+    padding-top: 48px;
   }
-  .game-tittle {
-    font-size: 32px; /* Уменьшаем размер */
-    text-align: center; /* Центрируем */
+  .game {
+    display: none;
   }
-  .game-text {
-    font-size: 18px; /* Уменьшаем размер */
-    text-align: center; /* Центрируем */
-    line-height: 24px;
+  .mini-game {
+    padding-top: 0px;
   }
-  /* Скрываем декоративные изображения в играх или адаптируем */
-  .game__img-1,
-  .game__img-2,
-  .game__img-3 {
-    display: none; /* Или перепозиционируйте их */
+  .mini-game__titles {
+    padding-bottom: 48px;
+  }
+  .mini-game__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .card-items {
+    width: 343px;
+    border-radius: 30px;
+    opacity: 1;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .card-items:nth-child(1) {
+    height: 528.6296386719px;
+  }
+  .card-items:nth-child(2), .card-items:nth-child(3), .card-items:nth-child(5) {
+    height: 567.63px;
+  }
+  .card-items:nth-child(4) {
+    height: 606.63px;
+  }
+  .card-items:nth-child(6) {
+    height: 626.63px;
+  }
+  .card-item__img {
+    display: none;
+  }
+  .card-item__img-mobile {
+    display: block;
+    width: 100%;
+  }
+  .card-item__description {
+    width: 294px;
+    height: 182px;
+    padding-top: 29px;
+    padding-right: 29px;
+    padding-left: 29px;
+    gap: 16px;
+  }
+  .card-item__title {
+    color: rgb(32, 32, 39);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .card-item__text {
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .card-item__button {
+    width: 285px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10;
+    padding: 16px 28px 16px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .footer-text {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=stile.css.map */

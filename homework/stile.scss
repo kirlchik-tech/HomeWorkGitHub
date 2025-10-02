@@ -1,3 +1,8 @@
+$colorblack: rgba(0, 0, 0, 1);
+$colorlightblack: rgba(32, 32, 39, 1);
+$colorlightwhite:rgba(255, 255, 255, 1);
+$colorwhite:#FFFFFF;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -158,7 +163,7 @@ z-index: 1;
 &-info { 
     width: 720px;
     height: 64px;
-    color: rgba(32, 32, 39, 1);
+    color: $colorlightblack;
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
@@ -174,9 +179,9 @@ z-index: 1;
 
 &-button{
     box-sizing: border-box;
-    border: 1px solid rgba(32, 32, 39, 1);
+    border: 1px solid $colorlightblack;
     border-radius: 60px;
-    background: rgba(32, 32, 39, 1);
+    background: $colorlightblack;
     width: 247px;
     height: 66px;
     display: flex;
@@ -185,7 +190,7 @@ z-index: 1;
     align-items: center;
     gap: 10;
     padding: 16px 28px 16px 28px;
-    color: rgba(255, 255, 255, 1);
+    color: $colorlightwhite;
     font-size: 24px;
     font-weight: 600;
     line-height: 29px;
@@ -226,7 +231,7 @@ z-index: 1;
    display: flex;
    flex-direction: row;
    align-items: center;
-   color: rgba(32, 32, 39, 1);
+   color: $colorlightblack;
    font-size: 30px;
    font-weight: 700;
    line-height: 37px;
@@ -238,7 +243,7 @@ z-index: 1;
 }
 
 .main{
-  padding-top: 174px;
+  padding-top: 94px;
   background: #202027;
    position: relative;
    padding-bottom: 144px;
@@ -311,7 +316,7 @@ z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: rgba(255, 255, 255, 1);
+  color: $colorlightwhite;
   font-size: 64px;
   font-weight: 700;
   line-height: 100%;
@@ -325,7 +330,7 @@ z-index: 1;
    display: flex;
    flex-direction: row;
    align-items: center;
-   color: rgba(255, 255, 255, 1);
+   color: $colorlightwhite;
    font-size: 24px;
    font-weight: 400;
    line-height: 32px;
@@ -346,7 +351,7 @@ z-index: 1;
 &-item_mini, &-item_medium, &-item_big {
   opacity: 1;
   border-radius: 30px;
-  background: #FFFFFF;
+  background: $colorwhite;
   transition: all 0.3s ease-in-out;
   position: relative;
   display: block; 
@@ -372,7 +377,7 @@ z-index: 1;
 &-item_medium:hover,
 &-item_big:hover {
   transform: scale(1.05); 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 10px 30px $colorblack; 
   z-index: 10; 
 }
 
@@ -429,7 +434,7 @@ z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  color: rgba(32, 32, 39, 1);
+  color: $colorlightblack;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -442,7 +447,7 @@ z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: rgba(32, 32, 39, 1);
+  color: $colorlightblack;
   font-size: 32px;
   font-weight: 700;
   line-height: 100%;
@@ -464,7 +469,7 @@ z-index: 1;
     line-height: 100%;
     letter-spacing: 0px;
     vertical-align: middle;
-    color: #FFFFFF;
+    color: $colorwhite;
     }
 }
 
@@ -478,20 +483,26 @@ z-index: 1;
     height: 500px;
     opacity: 1;
     border-radius: 30px;
-    background: #FFFFFF;
+    background: $colorwhite;
     margin-bottom: 32px;
     gap: 32px;
   }
+
+  &-item__img-mobile{
+    display: none;
+  }
+
   &-items:nth-child(6){
     margin-bottom: 0px;
   }
 
   &-item__img {
+    display: block;
     object-fit: cover;
     flex-shrink: 0;
   }
 
-  &-item__img:nth-child(2n) {
+  &-item__img:nth-child(3n) {
     position: relative;
     left: 64px;
   }
@@ -511,7 +522,7 @@ z-index: 1;
   }
 
   &-item__title{
-    color: rgba(32, 32, 39, 1);
+    color: $colorlightblack;
     font-size: 48px;
     font-weight: 700;
     line-height: 100%;
@@ -521,7 +532,7 @@ z-index: 1;
   }
 
   &-item__text{
-    color: rgba(32, 32, 39, 1);
+    color: $colorlightblack;
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
@@ -541,9 +552,9 @@ z-index: 1;
     gap: 10px;
     padding: 16px 28px;
     border-radius: 60px;
-    border: 1px solid black;
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(32, 32, 39, 1);
+    border: 1px solid $colorblack;
+    background-color: $colorlightwhite;
+    color: $colorlightblack;
     font-size: 24px;
     font-weight: 600;
     line-height: 29px;
@@ -557,8 +568,8 @@ z-index: 1;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: rgba(32, 32, 39, 1);
-      color: rgba(255, 255, 255, 1);
+      background-color: $colorlightblack;
+      color: $colorlightwhite;
       transition: 2s;
       transform: translateY(-2px);
     }
@@ -575,7 +586,7 @@ z-index: 1;
   justify-content: center;
 
 &-text {
-  color: rgba(0, 0, 0, 1);
+  color:$colorblack;
   font-size: 24px;
   font-weight: 600;
   line-height: 100%;

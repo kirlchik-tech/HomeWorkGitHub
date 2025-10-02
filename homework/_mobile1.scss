@@ -22,25 +22,25 @@
       }
 
       &__vector-mini{
-top: 0px;
-right: 0px;
-}      
+      top: 0px;
+      right: 0px;
+      }      
 
-&__mobile-green1{
-top: 97px;
-left: 38px;
-}
+      &__mobile-green1{
+      top: 97px;
+      left: 38px;
+      }
 
-&__mobile-green2{
-top: 557px;
-left: 273px;
+      &__mobile-green2{
+      top: 557px;
+      left: 273px;      
 
-}
+      }
 
-&__mobile-none1{
-top: 64px;
-left: 92px;
-}
+      &__mobile-none1{
+      top: 64px;
+      left: 92px;
+      }
 
 &__mobile-none2{
 top: 580px;
@@ -68,14 +68,14 @@ left: 304px;
         height: 700px;
         position: relative;
         z-index: 2;
-    }
+    
 
-    .header-text{
+    &-text{
         padding-top: 100px; 
         padding-bottom: 32px;
     }
 
-    .header-tittle{
+    &-tittle{
       font-weight: 700;
       font-style: Bold;
       font-size: 40px;
@@ -83,9 +83,9 @@ left: 304px;
       text-align: center;
     }
 
-    .header-info { 
+    &-info { 
         width: 100%; 
-        height: auto; /* Автоматическая высота */
+        height: auto; 
         color: rgba(32, 32, 39, 1);
         font-size: 16px;
         line-height: 100%;
@@ -93,8 +93,8 @@ left: 304px;
         text-align: center;
     }
 
-    .header-button{
-        width: 100%; /* Кнопка на всю ширину */
+    &-button{
+        width: 100%; 
        width: 285;
       height: 55;
       border-width: 1px;
@@ -114,7 +114,7 @@ left: 304px;
 
     }
 
-    .header-strip{
+    &-strip{
       height: 51.33911589746958px;
       top: 649px;
       left: -6px;
@@ -125,22 +125,22 @@ left: 304px;
       padding-left: 24px;
     }
 
-     .header-strip__item{
+     &-strip__item{
         margin-right: 24px;
      }
 
-    .header-strip__item-star {
+    &-strip__item-star {
    display: none;
    
 }
 
-.header-strip__item-mobile {
-    padding-right: 24px;
-   display: block;
+  &-strip__item-mobile {
+      padding-right: 24px;
+      display: block;
  }
 
-.header-advertisement{
-    font-weight: 700;
+ &-advertisement{
+    font-weight: 700; 
     font-style: Bold;
     font-size: 16px;
     line-height: 110.00000000000001%;
@@ -149,58 +149,155 @@ left: 304px;
     text-transform: uppercase;
 
 }
+}
 
-
-    /* Исправляем сетку карточек для мобилки */
+    
     .icon{
-        grid-template-columns: 1fr; /* Одна колонка вместо трёх */
+        grid-template-columns: 1fr; 
         gap: 20px;
+    
+    &-item_mini,
+    &-item_medium,
+    &-item_big {
+        width: 100%; 
+        height: auto; 
+        min-height: 200px; 
     }
 
-    .icon-item_mini,
-    .icon-item_medium,
-    .icon-item_big {
-        width: 100%; /* Карточки на всю ширину */
-        height: auto; /* Автоматическая высота */
-        min-height: 200px; /* Минимальная высота */
-    }
-
-    /* Убираем специфичные отступы для больших карточек */
-    .icon-item_big:nth-child(4),
-    .icon-item_big:nth-child(6) {
+    
+    &-item_big:nth-child(4),
+    &-item_big:nth-child(6) {
         margin-top: 0;
     }
 
-    /* Уменьшаем размеры текста в карточках */
-    .icon-item__title{
+    
+    &-item__title{
         font-size: 24px;
     }
 
-    .icon-item__text{
+    &-item__text{
         font-size: 14px;
     }
-
-    /* Исправляем основной контент */
+    }
+    
     .main{
-        padding-top: 80px; /* Уменьшаем отступ */
+        padding-top: 48px; 
     }
 
-    .game-tittle{
-        font-size: 32px; /* Уменьшаем размер */
-        text-align: center; /* Центрируем */
+    .game{
+        display: none;
     }
 
-    .game-text{
-        font-size: 18px; /* Уменьшаем размер */
-        text-align: center; /* Центрируем */
-        line-height: 24px;
+    .mini-game{
+        padding-top: 0px;    
+
+        &__titles{
+          padding-bottom: 48px;
+          }
+
+     &__title{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     color: rgba(255, 255, 255, 1);
+     font-size: 40px;
+     font-weight: 700;
+     line-height: 100%;
+     letter-spacing: 0px;
+     text-align: left;
+
+    }
     }
 
-    /* Скрываем декоративные изображения в играх или адаптируем */
-    .game__img-1,
-    .game__img-2,
-    .game__img-3 {
-        display: none; /* Или перепозиционируйте их */
-    }
+    .card{
 
+        &-items{
+        width: 343px;
+        border-radius: 30px;
+        opacity: 1;
+        flex-direction: column; 
+        gap: 0px;
+        }
+
+        &-items:nth-child(1){
+         height: 528.629638671875px;
+        }
+
+         &-items:nth-child(2),
+         &-items:nth-child(3),
+         &-items:nth-child(5){
+         height: 567.63px;
+        }
+
+        &-items:nth-child(4){
+          height: 606.63px;
+        }
+
+        &-items:nth-child(6){
+          height: 626.63px;
+        }
+
+        
+
+        &-item__img{
+            display: none;
+        }
+
+        &-item__img-mobile{
+            display: block;
+            width: 100%;
+        }
+
+         &-item__description{
+            width: 294px;
+            height: 182px;
+            padding-top: 29px;
+            padding-right: 29px;
+            padding-left: 29px;
+            gap: 16px;
+         }
+
+        &-item__title{
+            color: rgba(32, 32, 39, 1);
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 100%;
+          letter-spacing: 0px;
+          text-align: left;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        &-item__text{
+            color: rgba(0, 0, 0, 1);
+           display: flex;
+           flex-direction: row;
+           align-items: center;
+           font-size: 16px;
+           font-weight: 400;
+           line-height: 100%;
+           letter-spacing: 0px;
+           text-align: left;
+        }
+        &-item__button{
+         width: 285px;
+         height: 55px;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         gap: 10;
+         padding: 16px 28px 16px 28px;
+         font-size: 16px;
+         font-weight: 600;
+         line-height: 20px;
+         letter-spacing: 0%;
+         text-align: center;
+        }
+    }
+    .footer-text{
+            font-size: 16px;
+        }
+   
 }
