@@ -1,0 +1,206 @@
+@media(max-width: 768px){
+
+     .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+   .hero-page{
+      background-color: #E1FF8F;
+      position: relative;
+
+      &__vector-mini,
+      &__mobile-green1,
+      &__mobile-green2,
+      &__mobile-none1,
+      &__mobile-none2{
+        display: block;
+        position: absolute; 
+       z-index: 1; 
+       border-width: 1px;
+       opacity: 1;
+      }
+
+      &__vector-mini{
+top: 0px;
+right: 0px;
+}      
+
+&__mobile-green1{
+top: 97px;
+left: 38px;
+}
+
+&__mobile-green2{
+top: 557px;
+left: 273px;
+
+}
+
+&__mobile-none1{
+top: 64px;
+left: 92px;
+}
+
+&__mobile-none2{
+top: 580px;
+left: 304px;
+}
+
+
+     &__vector-big,
+     &__vector-wand1,
+     &__vector-wand2,
+     &__vector-wand3,
+     &__vector-wand4,
+     &__vector-triangle,
+     &__vector-star_green1,
+     &__vector-star_none1,
+     &__vector-star_green2,
+     &__vector-star_none2 {
+        display: none;
+    }
+   }
+
+
+.header{
+        width: 100%; 
+        height: 700px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .header-text{
+        padding-top: 100px; 
+        padding-bottom: 32px;
+    }
+
+    .header-tittle{
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 40px;
+      line-height: 120%;
+      text-align: center;
+    }
+
+    .header-info { 
+        width: 100%; 
+        height: auto; /* Автоматическая высота */
+        color: rgba(32, 32, 39, 1);
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .header-button{
+        width: 100%; /* Кнопка на всю ширину */
+       width: 285;
+      height: 55;
+      border-width: 1px;
+      opacity: 1;
+      gap: 10px;
+      border-radius: 60px;
+      padding-top: 16px;
+      padding-right: 28px;
+      padding-bottom: 16px;
+      padding-left: 28px;      
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 142%;
+      letter-spacing: 0%;
+      text-align: center;
+
+
+    }
+
+    .header-strip{
+      height: 51.33911589746958px;
+      top: 649px;
+      left: -6px;
+      border-width: 0.54px;
+      opacity: 1;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 24px;
+    }
+
+     .header-strip__item{
+        margin-right: 24px;
+     }
+
+    .header-strip__item-star {
+   display: none;
+   
+}
+
+.header-strip__item-mobile {
+    padding-right: 24px;
+   display: block;
+ }
+
+.header-advertisement{
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 4%;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+}
+
+
+    /* Исправляем сетку карточек для мобилки */
+    .icon{
+        grid-template-columns: 1fr; /* Одна колонка вместо трёх */
+        gap: 20px;
+    }
+
+    .icon-item_mini,
+    .icon-item_medium,
+    .icon-item_big {
+        width: 100%; /* Карточки на всю ширину */
+        height: auto; /* Автоматическая высота */
+        min-height: 200px; /* Минимальная высота */
+    }
+
+    /* Убираем специфичные отступы для больших карточек */
+    .icon-item_big:nth-child(4),
+    .icon-item_big:nth-child(6) {
+        margin-top: 0;
+    }
+
+    /* Уменьшаем размеры текста в карточках */
+    .icon-item__title{
+        font-size: 24px;
+    }
+
+    .icon-item__text{
+        font-size: 14px;
+    }
+
+    /* Исправляем основной контент */
+    .main{
+        padding-top: 80px; /* Уменьшаем отступ */
+    }
+
+    .game-tittle{
+        font-size: 32px; /* Уменьшаем размер */
+        text-align: center; /* Центрируем */
+    }
+
+    .game-text{
+        font-size: 18px; /* Уменьшаем размер */
+        text-align: center; /* Центрируем */
+        line-height: 24px;
+    }
+
+    /* Скрываем декоративные изображения в играх или адаптируем */
+    .game__img-1,
+    .game__img-2,
+    .game__img-3 {
+        display: none; /* Или перепозиционируйте их */
+    }
+
+}
