@@ -71,8 +71,8 @@ left: 304px;
     
 
     &-text{
-        padding-top: 100px; 
-        padding-bottom: 32px;
+        padding-top: 147px; 
+        padding-bottom: 36px;
     }
 
     &-tittle{
@@ -115,6 +115,7 @@ left: 304px;
     }
 
     &-strip{
+      width: auto;
       height: 51.33911589746958px;
       top: 649px;
       left: -6px;
@@ -127,6 +128,9 @@ left: 304px;
 
      &-strip__item{
         margin-right: 24px;
+        white-space: nowrap;
+        flex-shrink: 0; 
+       min-width: max-content; 
      }
 
     &-strip__item-star {
@@ -182,6 +186,7 @@ left: 304px;
     
     .main{
         padding-top: 48px; 
+        padding-bottom: 10px;
     }
 
     .game{
@@ -217,6 +222,8 @@ left: 304px;
         opacity: 1;
         flex-direction: column; 
         gap: 0px;
+        margin-bottom: 24px;
+        
         }
 
         &-items:nth-child(1){
@@ -249,13 +256,17 @@ left: 304px;
         }
 
          &-item__description{
-            width: 294px;
+            width: 330px;
             height: 182px;
             padding-top: 29px;
             padding-right: 29px;
             padding-left: 29px;
             gap: 16px;
          }
+
+         #gen &-item__description {
+           width: 300px;
+            }
 
         &-item__title{
             color: rgba(32, 32, 39, 1);
@@ -271,15 +282,16 @@ left: 304px;
 
         &-item__text{
             color: rgba(0, 0, 0, 1);
-           display: flex;
+           display: block;
            flex-direction: row;
            align-items: center;
            font-size: 16px;
            font-weight: 400;
-           line-height: 100%;
+           line-height: 140%;
            letter-spacing: 0px;
            text-align: left;
         }
+
         &-item__button{
          width: 285px;
          height: 55px;

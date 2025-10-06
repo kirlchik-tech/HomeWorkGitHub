@@ -21,20 +21,11 @@ body {
 .hero-page {
   background-color: #E1FF8F;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
-.hero-page__vector-mini {
-  display: none;
-}
-.hero-page__mobile-green1 {
-  display: none;
-}
-.hero-page__mobile-green2 {
-  display: none;
-}
-.hero-page__mobile-none1 {
-  display: none;
-}
-.hero-page__mobile-none2 {
+.hero-page__vector-mini, .hero-page__mobile-green1, .hero-page__mobile-green2, .hero-page__mobile-none1, .hero-page__mobile-none2 {
   display: none;
 }
 .hero-page__vector-big {
@@ -49,69 +40,69 @@ body {
   border-width: 1px;
   opacity: 1;
   position: absolute;
-  top: 0px;
-  left: 1330px;
+  top: 0%;
+  right: 13%;
   z-index: 1;
 }
 .hero-page__vector-wand2 {
   border-width: 1px;
   opacity: 1;
   position: absolute;
-  top: 254px;
-  left: 1540px;
+  top: 34%;
+  right: 13%;
   z-index: 1;
 }
 .hero-page__vector-wand3 {
   border-width: 1px;
   opacity: 1;
   position: absolute;
-  top: 350px;
-  left: 1690px;
+  top: 45%;
+  right: 0%;
   z-index: 1;
 }
 .hero-page__vector-wand4 {
   border-width: 1px;
   opacity: 1;
   position: absolute;
-  top: 660px;
-  left: 1810px;
+  top: 80%;
+  right: 3%;
   z-index: 1;
 }
 .hero-page__vector-triangle {
   border-width: 1px;
   opacity: 1;
   position: absolute;
-  top: 450px;
-  left: 1710px;
+  top: 56%;
+  right: 6%;
   z-index: 1;
 }
 .hero-page__vector-star_green1 {
-  top: 551px;
-  left: 1410px;
+  top: 68%;
+  right: 24%;
   border-width: 1px;
   opacity: 1;
   position: absolute;
   z-index: 1;
 }
 .hero-page__vector-star_none1 {
-  top: 581px;
-  left: 1466px;
+  top: 72%;
+  right: 18%;
   border-width: 1px;
   opacity: 1;
   position: absolute;
   z-index: 1;
 }
 .hero-page__vector-star_green2 {
-  top: 104px;
-  left: 290px;
+  top: 13%;
+  left: 15%;
   border-width: 1px;
   opacity: 1;
   position: absolute;
   z-index: 1;
 }
 .hero-page__vector-star_none2 {
-  top: 79px;
-  left: 383px;
+  top: 10%;
+  left: 20%;
   border-width: 1px;
   opacity: 1;
   position: absolute;
@@ -119,14 +110,16 @@ body {
 }
 
 .header {
-  width: 1440px;
+  width: 100%;
   height: 800px;
   position: relative;
   z-index: 2;
+  justify-content: center;
 }
 .header-text {
   padding-top: 196px;
   padding-bottom: 48px;
+  max-width: 720px;
 }
 .header-tittle {
   font-weight: 700;
@@ -137,8 +130,6 @@ body {
   vertical-align: middle;
 }
 .header-info {
-  width: 720px;
-  height: 64px;
   color: rgb(32, 32, 39);
   font-size: 24px;
   font-weight: 400;
@@ -175,12 +166,11 @@ body {
   position: absolute;
   z-index: 2;
   top: 710px;
-  width: 3220px;
   height: 90px;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 27px 49px 27px 49px;
+  justify-content: center;
+  align-items: center;
+  padding: 27px 49px 27px 19px;
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(50px);
@@ -189,6 +179,10 @@ body {
 }
 .header-strip__item {
   margin-right: 51px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 .header-strip__item-star {
   margin-right: 51px;
@@ -217,8 +211,8 @@ body {
 }
 
 .game__img-1 {
-  top: 195px;
-  left: 1240px;
+  top: 2%;
+  right: 11%;
   opacity: 1;
   position: absolute;
   z-index: 1;
@@ -240,7 +234,7 @@ body {
   z-index: 1;
 }
 .game__img-4 {
-  top: 1630px;
+  top: 1540px;
   right: 270px;
   opacity: 1;
   border-width: 1px;
@@ -248,7 +242,7 @@ body {
   z-index: 1;
 }
 .game__img-5 {
-  top: 1600px;
+  top: 1510px;
   right: 350px;
   opacity: 1;
   border-width: 1px;
@@ -448,6 +442,9 @@ body {
   padding-left: 48px;
   padding-right: 48px;
 }
+#gen .card-item__description {
+  width: 585px;
+}
 .card-item__title {
   color: rgb(32, 32, 39);
   font-size: 48px;
@@ -563,8 +560,8 @@ body {
     z-index: 2;
   }
   .header-text {
-    padding-top: 100px;
-    padding-bottom: 32px;
+    padding-top: 147px;
+    padding-bottom: 36px;
   }
   .header-tittle {
     font-weight: 700;
@@ -601,6 +598,7 @@ body {
     text-align: center;
   }
   .header-strip {
+    width: auto;
     height: 51.3391158975px;
     top: 649px;
     left: -6px;
@@ -612,6 +610,10 @@ body {
   }
   .header-strip__item {
     margin-right: 24px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: -moz-max-content;
+    min-width: max-content;
   }
   .header-strip__item-star {
     display: none;
@@ -649,6 +651,7 @@ body {
   }
   .main {
     padding-top: 48px;
+    padding-bottom: 10px;
   }
   .game {
     display: none;
@@ -676,6 +679,7 @@ body {
     opacity: 1;
     flex-direction: column;
     gap: 0px;
+    margin-bottom: 24px;
   }
   .card-items:nth-child(1) {
     height: 528.6296386719px;
@@ -697,12 +701,15 @@ body {
     width: 100%;
   }
   .card-item__description {
-    width: 294px;
+    width: 330px;
     height: 182px;
     padding-top: 29px;
     padding-right: 29px;
     padding-left: 29px;
     gap: 16px;
+  }
+  #gen .card-item__description {
+    width: 300px;
   }
   .card-item__title {
     color: rgb(32, 32, 39);
@@ -717,12 +724,12 @@ body {
   }
   .card-item__text {
     color: rgb(0, 0, 0);
-    display: flex;
+    display: block;
     flex-direction: row;
     align-items: center;
     font-size: 16px;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 140%;
     letter-spacing: 0px;
     text-align: left;
   }
@@ -743,5 +750,136 @@ body {
   }
   .footer-text {
     font-size: 16px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1195px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    height: 700px;
+  }
+  .header-tittle {
+    font-size: 50px;
+  }
+  .header-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  .header-strip {
+    top: 630px;
+  }
+  .hero-page {
+    height: 720px;
+  }
+  .hero-page__vector-wand1, .hero-page__vector-wand2, .hero-page__vector-wand3, .hero-page__vector-wand4, .hero-page__vector-triangle, .hero-page__vector-star_green1, .hero-page__vector-star_none1 {
+    display: none;
+  }
+  .hero-page__vector-star_green2 {
+    top: 5%;
+    left: 10%;
+  }
+  .hero-page__vector-star_none2 {
+    top: 70%;
+    left: 48%;
+  }
+  .icon {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .icon-item_mini:hover, .icon-item_medium:hover, .icon-item_big:hover {
+    display: none;
+  }
+  .icon-item_big:nth-child(4), .icon-item_big:nth-child(6) {
+    margin-top: 0px;
+  }
+  .game__img-1 {
+    display: none;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .card-items {
+    width: 343px;
+    border-radius: 30px;
+    opacity: 1;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 24px;
+  }
+  .card-items:nth-child(1) {
+    height: 528.6296386719px;
+  }
+  .card-items:nth-child(2), .card-items:nth-child(3), .card-items:nth-child(5) {
+    height: 567.63px;
+  }
+  .card-items:nth-child(4) {
+    height: 606.63px;
+  }
+  .card-items:nth-child(6) {
+    height: 626.63px;
+  }
+  .card-item__img {
+    display: none;
+  }
+  .card-item__img-mobile {
+    display: block;
+    width: 100%;
+  }
+  .card-item__description {
+    width: 330px;
+    height: 182px;
+    padding-top: 29px;
+    padding-right: 29px;
+    padding-left: 29px;
+    gap: 16px;
+  }
+  #gen .card-item__description {
+    width: 300px;
+  }
+  .card-item__title {
+    color: rgb(32, 32, 39);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .card-item__text {
+    color: rgb(0, 0, 0);
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .card-item__button {
+    width: 285px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10;
+    padding: 16px 28px 16px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
   }
 }/*# sourceMappingURL=stile.css.map */
