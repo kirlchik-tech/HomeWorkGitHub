@@ -1,3 +1,3 @@
-// Задание 1.2
-let a = 20;
-alert(a);
+// Задание 2
+const firstIphoneYear = 2007;
+alert(firstIphoneYear);
