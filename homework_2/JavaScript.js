@@ -1,3 +1,4 @@
-// Задание 5
-let result = 2 ** 5;
-alert(result);
+// Задание 6
+let a = 9;
+let b = 2;
+alert(a % b);
