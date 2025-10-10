@@ -1,4 +1,4 @@
-@media(min-width: 769px) and (max-width: 1195px) {
+@media(min-width: 769px) and (max-width: 1200px) {
   .center {
         padding-left: 16px;
         padding-right: 16px;
@@ -47,16 +47,22 @@
 
    .icon{
        display: flex;
-       gap: 15px;
+       gap: 25px;
          flex-wrap: wrap;
         align-content: center;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         flex-direction: row;
     
     &-item_mini:hover,
 &-item_medium:hover,
 &-item_big:hover {
   display: none;
+}
+
+&-item_mini,
+&-item_medium,
+&-item_big {
+  height: 551px;
 }
 
 &-item_big:nth-child(4),
@@ -75,8 +81,9 @@
   .card{
      display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 25px;
 
         &-items{
         width: 343px;
@@ -101,7 +108,7 @@
         &-items:nth-child(4){
           height: 606.63px;
         }
-
+        
         &-items:nth-child(6){
           height: 626.63px;
         }

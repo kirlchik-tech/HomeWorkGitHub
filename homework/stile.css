@@ -211,8 +211,8 @@ body {
 }
 
 .game__img-1 {
-  top: 2%;
-  right: 11%;
+  top: 1%;
+  right: 3%;
   opacity: 1;
   position: absolute;
   z-index: 1;
@@ -752,7 +752,7 @@ body {
     font-size: 16px;
   }
 }
-@media (min-width: 769px) and (max-width: 1195px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .center {
     padding-left: 16px;
     padding-right: 16px;
@@ -786,14 +786,17 @@ body {
   }
   .icon {
     display: flex;
-    gap: 15px;
+    gap: 25px;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     flex-direction: row;
   }
   .icon-item_mini:hover, .icon-item_medium:hover, .icon-item_big:hover {
     display: none;
+  }
+  .icon-item_mini, .icon-item_medium, .icon-item_big {
+    height: 551px;
   }
   .icon-item_big:nth-child(4), .icon-item_big:nth-child(6) {
     margin-top: 0px;
@@ -804,8 +807,9 @@ body {
   .card {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 25px;
   }
   .card-items {
     width: 343px;
