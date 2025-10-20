@@ -449,15 +449,15 @@ body {
     gap: 10px;
     border-radius: 60px;
     border: 1px solid $colorblack;
-    background-color: $colorlightwhite;
-    color: $colorlightblack;
+    background-color: $colorlightblack;
+    color: $colorlightwhite;
     font-size: 24px;
     font-weight: 600;
     line-height: 29px;
 
     &:hover {
-      background-color: $colorlightblack;
-      color: $colorlightwhite;
+      background-color: $colorlightwhite;
+      color: $colorlightblack;
       transition: 2s;
       transform: translateY(-2px);
     }
@@ -481,6 +481,57 @@ body {
     margin: 0;
   }
 }
+
+
+   // cтраница угадай число
+.Guess {
+  width: 100vw;
+  height: 100vw;
+  background-color: #b108ff;
+  &__tittle{
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: $colorwhite;
+    display: flex;
+    padding-top: 150px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__actions{
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+
+  &__button{
+    width: 247px;
+    height: 66px;
+    padding: 16px 28px;
+    gap: 10px;
+    background-color: $colorlightwhite;
+    color: $colorlightblack;
+
+
+    &:hover {
+      background-color: $colorlightblack;
+      color: $colorlightwhite;
+      transition: 2s;
+      transform: translateY(-2px);
+    }
+  }
+  .Guess__actions:nth-child(3) &__button {
+    width: 333px;
+}
+}
+
 
 @import 'mobile1';
 @import "tablet1";

@@ -110,3 +110,30 @@ for (let i = 1; i < numbers.length; i++) {
 }
 
 console.log("Минимальное число:", min);
+
+function getRectangleArea() {
+   return this.width * this.height;
+};
+
+function getRectanglePerimeter() {
+   return this.width * 2 + this.height * 2;
+};
+
+const square1 = {
+    width: '30',
+    height: '15',
+    getArea: getRectangleArea,
+   getPerimeter: getRectanglePerimeter,
+};
+
+const square2 = {
+    width: '25',
+    height: '25',
+     getArea: getRectangleArea,
+   getPerimeter: getRectanglePerimeter,
+};
+
+console.log(square1.getArea());
+console.log(square1.getPerimeter());
+console.log(square2.getArea());
+console.log(square2.getPerimeter());
