@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -490,6 +491,271 @@ body {
   width: 333px;
 }
 
+.arithmetic {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  text-align: center;
+}
+
+.container-title {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.problem-container {
+  background-color: #f0f8ff;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.problem {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 15px 0;
+}
+
+.inputs-container {
+  margin-bottom: 25px;
+}
+
+.inputs {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.inputs:focus {
+  border-color: #6e8efb;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.buttons__button {
+  padding: 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+  width: 100%;
+}
+
+.buttons__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.buttons__button:disabled:hover {
+  transform: none !important;
+  background-color: inherit !important;
+}
+
+#check-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#check-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+#next-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+#next-btn:hover {
+  background-color: #0b7dda;
+  transform: translateY(-2px);
+}
+
+#restart-btn {
+  background-color: #ff9800;
+  color: white;
+}
+
+#restart-btn:hover {
+  background-color: #e68a00;
+  transform: translateY(-2px);
+}
+
+.exit-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: white;
+}
+
+.exit-btn:hover {
+  background: linear-gradient(135deg, #ff4757, #ff3742);
+  transform: translateY(-2px);
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(-2px) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.05);
+  }
+  100% {
+    transform: translateY(-2px) scale(1);
+  }
+}
+.result {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+  display: none;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.correct {
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+  color: #155724;
+  border: 2px solid #c3e6cb;
+}
+
+.incorrect {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  color: #721c24;
+  border: 2px solid #f5c6cb;
+}
+
+.progress-bar {
+  height: 12px;
+  background: linear-gradient(135deg, #e0e0e0, #d0d0d0);
+  border-radius: 10px;
+  margin-top: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  width: 0%;
+  transition: width 0.5s ease;
+  border-radius: 10px;
+}
+
+/* Стили для выхода */
+.exiting {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53) !important;
+}
+
+.fade-out {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+.confetti {
+  position: fixed;
+  top: -20px;
+  opacity: 0;
+  animation: confetti-fall var(--animation-duration, 3s) ease-in forwards;
+  z-index: 1000;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(calc(var(--fall-distance, 100vh) / 2)) rotate(180deg) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(var(--fall-distance, 100vh)) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+/* Дополнительные анимации для особого праздника */
+@keyframes confetti-bounce {
+  0%, 100% {
+    transform: translateY(-20px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg);
+  }
+}
+@keyframes confetti-spin {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.5);
+  }
+}
+/* Специальный класс для конфетти уровня */
+.confetti.level-up {
+  animation: confetti-fall 4s ease-in-out forwards, confetti-bounce 2s ease-in-out infinite;
+}
+
+.confetti.special {
+  animation: confetti-fall 3s ease-in forwards, confetti-spin 1s linear infinite;
+}
+
 @media (max-width: 768px) {
   .center {
     padding-left: 16px;
@@ -734,6 +1000,16 @@ body {
   }
   .footer__text {
     font-size: 16px;
+  }
+  .Guess {
+    height: 265vw;
+  }
+  .Guess__tittle {
+    padding-top: 30px;
+    font-size: 48px;
+  }
+  .container-title {
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {

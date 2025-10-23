@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stile.css">
+    <title>My project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="arithmetic">
+      <div class="container">
+        <h1 class="container-title">Арифметическая игра</h1>
+        
+        <div class="game-info">
+            <div class="score">Очки: <span id="score">0</span></div>
+            <div class="level">Уровень: <span id="level">1</span></div>
+        </div>
+        
+        <div class="problem-container">
+            <div class="problem" id="problem">5 + 3</div>
+        </div>
+        
+        <div class="inputs-container">
+            <input class="inputs" type="number" id="answer-input" placeholder="Введите ответ">
+        </div>
+        
+        <div class="buttons">
+            <button class="buttons__button" id="check-btn">Проверить</button>
+            <button class="buttons__button" id="next-btn">Следующая</button>
+            <button class="buttons__button" id="restart-btn">Заново</button>
+            <button class="buttons__button exit-btn" id="exit-btn">Выйти</button>
+        </div>
+        
+        <div class="result" id="result"></div>
+        
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+    </section>
+
+    <script src="arithmetic.js"></script>
+</body>
+</html>
