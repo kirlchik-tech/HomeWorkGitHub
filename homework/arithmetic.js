@@ -1,37 +1,7 @@
-// Элементы DOM
-const problemElement = document.getElementById('problem');
-const answerInput = document.getElementById('answer-input');
-const checkButton = document.getElementById('check-btn');
-const nextButton = document.getElementById('next-btn');
-const restartButton = document.getElementById('restart-btn');
-const exitButton = document.getElementById('exit-btn');
-const resultElement = document.getElementById('result');
-const scoreElement = document.getElementById('score');
-const levelElement = document.getElementById('level');
-const progressElement = document.getElementById('progress');
-
 // Переменные игры
 let score = 0;
 let level = 1;
-let currentProblem = {};
 let correctAnswers = 0;
-let totalProblems = 0;
-let problemSolved = false;
-
-// Инициализация игры
-function initGame() {
-    score = 0;
-    level = 1;
-    correctAnswers = 0;
-    totalProblems = 0;
-    problemSolved = false;
-    updateStats();
-    generateProblem();
-    answerInput.value = '';
-    resultElement.style.display = 'none';
-    updateProgress();
-    updateButtonsState();
-}
 
 // Генерация случайной задачи
 function generateProblem() {
@@ -65,126 +35,54 @@ function generateProblem() {
             break;
     }
     
-    currentProblem = {
-        num1,
-        num2,
-        operation,
-        answer
+    return {
+        problem: `${num1} ${operation} ${num2}`,
+        answer: answer
     };
-    
-    problemElement.textContent = `${num1} ${operation} ${num2}`;
-    totalProblems++;
-    problemSolved = false;
-    updateButtonsState();
 }
 
-// Проверка ответа
-function checkAnswer() {
-    if (problemSolved) {
-        return;
-    }
-    
-    const userAnswer = parseFloat(answerInput.value);
-    
-    if (isNaN(userAnswer)) {
-        alert('Пожалуйста, введите число!');
-        return;
-    }
-    
-    if (userAnswer === currentProblem.answer) {
-        // Правильный ответ
-        score += level;
-        correctAnswers++;
-        showResult('Правильно!', 'correct');
+// Основной игровой цикл
+function startGame() {
+    while (true) {
+        const { problem, answer } = generateProblem();
         
-        // Повышение уровня каждые 5 правильных ответов
-        if (correctAnswers % 5 === 0) {
-            level++;
-            updateStats();
-            alert(`Поздравляем! Вы достигли уровня ${level}!`);
+        // Используем prompt() для запроса ответа
+        const userAnswer = prompt(`Решите пример: ${problem}\n\nТекущие очки: ${score}\nУровень: ${level}\nПравильных ответов: ${correctAnswers}`);
+        
+        // Если пользователь нажал "Отмена" - выходим на главную страницу
+        if (userAnswer === null) {
+            const finalMessage = `Игра завершена!\n\nИтоговый результат:\n• Уровень: ${level}\n• Очки: ${score}\n• Правильных ответов: ${correctAnswers}`;
+            alert(finalMessage);
+            window.location.href = "index.html"; // Возврат на главную страницу
+            break;
         }
-    } else {
-        // Неправильный ответ
-        showResult(`Неправильно! Правильный ответ: ${currentProblem.answer}`, 'incorrect');
-    }
-    
-    problemSolved = true;
-    updateStats();
-    updateProgress();
-    updateButtonsState();
-}
-
-// Показать результат
-function showResult(message, className) {
-    resultElement.textContent = message;
-    resultElement.className = `result ${className}`;
-    resultElement.style.display = 'block';
-}
-
-// Обновление статистики
-function updateStats() {
-    scoreElement.textContent = score;
-    levelElement.textContent = level;
-}
-
-// Обновление прогресса
-function updateProgress() {
-    const progressPercentage = (correctAnswers % 5) * 20;
-    progressElement.style.width = `${progressPercentage}%`;
-}
-
-// Обновление состояния кнопок
-function updateButtonsState() {
-    if (problemSolved) {
-        checkButton.disabled = true;
-        checkButton.style.opacity = '0.6';
-        checkButton.style.cursor = 'not-allowed';
         
-        nextButton.disabled = false;
-        nextButton.style.opacity = '1';
-        nextButton.style.cursor = 'pointer';
-    } else {
-        checkButton.disabled = false;
-        checkButton.style.opacity = '1';
-        checkButton.style.cursor = 'pointer';
+        const userAnswerNum = parseFloat(userAnswer);
         
-        nextButton.disabled = true;
-        nextButton.style.opacity = '0.6';
-        nextButton.style.cursor = 'not-allowed';
+        if (isNaN(userAnswerNum)) {
+            alert('Пожалуйста, введите число!');
+            continue;
+        }
+        
+        if (userAnswerNum === answer) {
+            // Правильный ответ
+            score += level;
+            correctAnswers++;
+            alert('✅ Правильно!');
+            
+            // Повышение уровня каждые 5 правильных ответов
+            if (correctAnswers % 5 === 0) {
+                level++;
+                alert(`🎉 Поздравляем! Вы достигли уровня ${level}!`);
+            }
+        } else {
+            // Неправильный ответ
+            alert(`❌ Неправильно! Правильный ответ: ${answer}`);
+        }
     }
 }
-
-// Следующая задача
-function nextProblem() {
-    generateProblem();
-    answerInput.value = '';
-    resultElement.style.display = 'none';
-    answerInput.focus();
-}
-
-// Функция выхода
-function exitGame() {
-    const finalMessage = ` 🕹️ Игра завершена! 🕹️ \n\nВаш результат:\n• Уровень: ${level}\n• Очки: ${score}\n• Правильных ответов: ${correctAnswers}\n\nХотите выйти в главное меню?`;
-    
-    if (confirm(finalMessage)) {
-        window.location.href = "index.html"; 
-    }
-    // Если пользователь нажал "Отмена", остаемся в игре
-}
-
-// Обработчики событий
-checkButton.addEventListener('click', checkAnswer);
-nextButton.addEventListener('click', nextProblem);
-restartButton.addEventListener('click', initGame);
-exitButton.addEventListener('click', exitGame);
-
-answerInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter' && !problemSolved) {
-        checkAnswer();
-    }
-});
 
 // Запуск игры при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
-    initGame();
+    startGame();
 });
