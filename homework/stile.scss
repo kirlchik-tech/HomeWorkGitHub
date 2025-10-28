@@ -1,4 +1,6 @@
 $colorblack: rgba(0, 0, 0, 1);
+$colorverylightblack: rgba(0, 0, 0, 0.3);
+$colormediumlightblack: rgba(0, 0, 0, 0.6);
 $colorlightblack: rgba(32, 32, 39, 1);
 $colorlightwhite: rgba(255, 255, 255, 1);
 $colorwhite: #FFFFFF;
@@ -535,7 +537,7 @@ body {
  //cтраница с арифметикой
 
 .arithmetic {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #d1e94a, #ffb445);
     min-height: 100vh;
     margin: 0;
     display: flex;
@@ -545,14 +547,60 @@ body {
 
 
 &__title {
-    color: white;
+    color: $colorwhite;
+    font-size: 3.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px $colorverylightblack;
+}
+}
+
+ //cтраница переверни текст
+
+ .text{
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+
+    &__title {
+    color: $colorwhite;
+    font-size: 3.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px $colorverylightblack;
+}
+
+}
+
+ //cтраница Викторина
+
+ .quiz{
+        background: linear-gradient(135deg, #8bff68, #e7ff7a);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    font-family: Arial, sans-serif;
+
+    &__title {
+    color: $colormediumlightblack;
+    font-size: 3.5rem;
+    text-align: center;
+    
+    }
+    
+    &__text{
+    color: $colormediumlightblack;
     font-size: 3rem;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-}
 
-
+    }
+ }
 
 @import 'mobile1';
 @import "tablet1";
