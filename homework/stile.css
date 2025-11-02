@@ -497,7 +497,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", serif;
 }
 .arithmetic__title {
   color: #FFFFFF;
@@ -513,7 +513,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", serif;
 }
 .text__title {
   color: #FFFFFF;
@@ -531,7 +531,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", serif;
 }
 .quiz__title {
   color: rgba(0, 0, 0, 0.6);
@@ -542,6 +542,50 @@ body {
   color: rgba(0, 0, 0, 0.6);
   font-size: 3rem;
   text-align: center;
+}
+
+.stone {
+  background: linear-gradient(135deg, #943338, #818181);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: "Montserrat", serif;
+}
+.stone__title {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.stone__text {
+  color: #FFFFFF;
+  font-size: 2rem;
+  text-align: center;
+}
+.stone__actions {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.stone__button {
+  width: 247px;
+  height: 66px;
+  padding: 16px 28px;
+  gap: 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(32, 32, 39);
+}
+.stone__button:hover {
+  background-color: rgb(32, 32, 39);
+  color: rgb(255, 255, 255);
+  transition: 2s;
+  transform: translateY(-2px);
+}
+.stone__actions:nth-child(4) .stone__button {
+  width: 333px;
 }
 
 @media (max-width: 768px) {
