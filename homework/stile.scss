@@ -179,6 +179,22 @@ body {
   backdrop-filter: blur(50px);
   background: rgba(188, 236, 48, 1);
 
+  &__scroll{
+    display: flex;
+    align-items: center;
+    animation: scrollAnimation 20s linear infinite;
+    white-space: nowrap;
+  }
+
+  @keyframes scrollAnimation {
+    0% {
+        transform: translateX(100%); /* Начинаем справа за экраном */
+    }
+    100% {
+        transform: translateX(-100%); /* Заканчиваем слева за экраном */
+    }
+}
+
   &__item {
     margin-right: 51px;
     white-space: nowrap;

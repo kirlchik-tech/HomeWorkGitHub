@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -149,6 +150,20 @@ body {
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   background: rgb(188, 236, 48);
+}
+.games-preview__scroll {
+  display: flex;
+  align-items: center;
+  animation: scrollAnimation 20s linear infinite;
+  white-space: nowrap;
+}
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(100%); /* Начинаем справа за экраном */
+  }
+  100% {
+    transform: translateX(-100%); /* Заканчиваем слева за экраном */
+  }
 }
 .games-preview__item {
   margin-right: 51px;

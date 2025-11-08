@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- текст для заполнения -->
+     <div class="header">
+    <div class="header-texts">
+        <div class="header-tittle">
+
+        </div>
+        <button class="header-button">Убрать / вернуть текст</button> 
+    <div class="header-context">
+        <p class="header-text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis amet voluptate quis facilis delectus reprehenderit obcaecati, sed perspiciatis architecto.</p>
+
+         <button class="header-text__btn">Изменить цвет текста</button>
+
+        <p class="header-text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis amet voluptate quis facilis delectus reprehenderit obcaecati, sed perspiciatis architecto.</p>
+        <p class="header-text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis amet voluptate quis facilis delectus reprehenderit obcaecati, sed perspiciatis architecto.</p>
+    </div>
+    </div>
+    </div>
+    <!-- Задание 1 -->
+    <script>
+        const btnEL = document.querySelector('.header-button'); 
+        const ttlEL = document.querySelector('.header-tittle');
+
+        btnEL.addEventListener('click', () => {
+
+        if (ttlEL.innerHTML.includes('Задание 1')) {
+
+        ttlEL.innerHTML = '';
+
+         } else {
+
+        ttlEL.innerHTML = '<h1>Задание 1</h1>';
+         }
+       });
+    </script>
+    <!-- Задание 2 -->
+    <script>
+        const btntEL = document.querySelector('.header-text__btn')
+        const ht1EL = document.querySelector('.header-text1')
+
+          btntEL.addEventListener('click', () => {
+              ht1EL.style.color = 'blue';
+              
+            });
+    </script>
+
+    <!-- Задание 3 -->
+
+    <div class="main">
+    <h1 class="main-tittle" clas>Я могу поменяться</h1>
+    <button class="main-button">Поменять текст</button>
+    </div>
+
+    <script>
+        const mtEL = document.querySelector('.main-tittle'); 
+        const mbEL = document.querySelector('.main-button');
+
+        mbEL.addEventListener('click', () => {
+         mtEL.textContent = 'Привет, мир!';
+        
+       });
+    </script>
+
+    <!-- Задание 4 -->
+
+    <div class="search">
+        <h2 class="search-tittle">Виды текста</h2>
+        <p class="description">Обычный текст</p>
+        <p class="notdesription">Обычный текст</p>
+        <p class="notdesription">Обычный текст</p>
+        <p class="description">Обычный текст</p>
+        <p class="description">Обычный текст</p>
+        <button class="search-button">Показать еще</button>
+    </div>
+
+    <script>
+        const dEL = document.querySelectorAll('.description'); 
+        const sbEL = document.querySelector('.search-button');
+
+        sbEL.addEventListener('click', () => {
+         const searchDescriptions = document.querySelectorAll('.search .description');
+             searchDescriptions.forEach(element => {
+                element.textContent = 'Измененный текст';
+            });
+         });
+    </script>
+
+    <!-- Задание 5 -->
+ 
+    <div class="found">
+        <h2 class="found-tittle">Виды текста</h2>
+        <p class="description">Обычный текст</p>
+        <p class="description">Обычный текст</p>
+        <p class="description">Обычный текст</p>
+        <button class="found-button">Новые тексты</button>
+    </div>
+
+    <script>
+        const dsEL = document.querySelectorAll('.description'); 
+        const fbEL = document.querySelector('.found-button');
+
+        fbEL.addEventListener('click', () => {
+         const foundDescriptions = document.querySelectorAll('.found .description');
+             foundDescriptions.forEach(element => {
+                element.textContent = 'Новый текст';
+            });
+         });
+    </script>
+     
+     <!-- Задание 6 -->
+
+     <div class="end">
+        <button class="end-button">Добавить элемент</button>
+     </div>
+
+     <style>
+        .end {
+            padding-top: 30px;
+        }
+     </style>
+
+      <script>
+        const ebEL = document.querySelector('.end-button');
+        
+
+        ebEL.addEventListener('click', () => {
+
+        const pEL = document.createElement('p');
+        pEL.textContent = 'Новый абзац';
+        pEL.classList.add('end-text');
+
+         document.body.appendChild(pEL);
+
+        })
+    </script>
+
+    <!-- Задание 7 -->
+
+    <div class="delete">
+        <h2 class="delete-tittle">Убираем текст</h2>
+        <p class="description">1 текст</p>
+        <p class="description">2 текст</p>
+        <p class="description">3 текст</p>
+        <button class="delete-button">удалить 1 текст</button>
+    </div>
+
+    <script>
+        const dstEL = document.querySelector('.description'); 
+        const dbEL = document.querySelector('.delete-button');
+
+        dbEL.addEventListener('click', () => {
+         const firstdescription = document.querySelector('.delete .description');
+            if (firstdescription) {
+            firstdescription.remove();
+        }
+         });
+    </script>
+
+
+
+</body>
+</html>
