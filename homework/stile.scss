@@ -665,10 +665,51 @@ body {
     }
   }
 
-  // Специальный стиль для третьей кнопки
+  
   .stone__actions:nth-child(4) &__button {
     width: 333px;
   }
+}
+
+// Страница с игрой генерация цветов
+
+.color {
+    background: linear-gradient(135deg, #ebb360, #f0ee6d);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    font-family: "Montserrat", serif;
+
+
+  &__actions {   
+      padding-top: 25px;
+      display: flex;
+      justify-content: center;
+  }
+
+  &__button {
+      width: 247px;
+      height: 66px;
+      padding: 16px 28px;
+      gap: 10px;
+      background-color: $colorlightwhite; 
+      color: $colorlightblack; 
+      transition: all 0.3s ease; 
+  }
+
+  &__button:hover {
+      background-color: $colorlightblack;
+      color: $colorlightwhite; 
+      transform: translateY(-2px);
+  }
+}
+
+.color__actions:nth-child(2) .color__button { 
+    width: 333px;
 }
 
 @import 'mobile1';
