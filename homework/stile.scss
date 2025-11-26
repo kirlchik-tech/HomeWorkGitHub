@@ -268,7 +268,7 @@ body {
   }
 }
 
-.games-preview-cards {
+.games-preview-articls {
   display: grid;
   grid-template-columns: repeat(3, 378px);
   gap: 32px;
@@ -277,7 +277,7 @@ body {
   z-index: 2;
 }
 
-.games-preview-card {
+.games-preview-articl {
   opacity: 1;
   border-radius: 30px;
   background: $colorwhite;
@@ -379,12 +379,12 @@ body {
   }
 }
 
-.game-cards {
+.game-articls {
   position: relative;
   z-index: 2;
 }
 
-.game-card {
+.game-articl {
   display: flex;
   width: 100%;
   height: 500px;
@@ -399,13 +399,13 @@ body {
   }
 
   &--odd {
-    .game-card__content { order: 1; }
-    .game-card__image--desktop { order: 2; }
+    .game-articl__content { order: 1; }
+    .game-articl__image--desktop { order: 2; }
   }
 
   &--even {
-    .game-card__content { order: 2; }
-    .game-card__image--desktop { order: 1; }
+    .game-articl__content { order: 2; }
+    .game-articl__image--desktop { order: 1; }
   }
 
   &__image {

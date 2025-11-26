@@ -151,26 +151,26 @@
         }
    }
 
-   .games-preview-cards {
+   .games-preview-articls {
         grid-template-columns: 1fr; 
         gap: 20px;
     
-        .games-preview-card {
+        .games-preview-articl {
             width: 100%; 
             height: auto; 
             min-height: 200px; 
         }
 
-        .games-preview-card--big:nth-child(4),
-        .games-preview-card--big:nth-child(6) {
+        .games-preview-articl--big:nth-child(4),
+        .games-preview-articl--big:nth-child(6) {
             margin-top: 0;
         }
 
-        .games-preview-card__title {
+        .games-preview-articl__title {
             font-size: 24px;
         }
 
-        .games-preview-card__number {
+        .games-preview-articl__number {
             font-size: 14px;
         }
    }
@@ -204,8 +204,8 @@
         }
    }
 
-   .game-cards {
-        .game-card {
+   .game-articls {
+        .game-articl {
             width: 343px;
             border-radius: 30px;
             opacity: 1;

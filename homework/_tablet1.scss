@@ -47,7 +47,7 @@
         }
     }
 
-    .games-preview-cards {
+    .games-preview-articls {
         display: flex;
         gap: 25px;
         flex-wrap: wrap;
@@ -55,7 +55,7 @@
         justify-content: space-evenly;
         flex-direction: row;
 
-        .games-preview-card {
+        .games-preview-articl {
             &--mini,
             &--medium,
             &--big {
@@ -91,38 +91,35 @@
            }
     }
 
-    .game-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        gap: 25px;
+    .game-articls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: flex-start; 
 
-        .game-card {
-            width: 343px;
-            border-radius: 30px;
-            opacity: 1;
-            flex-direction: column;
-            gap: 0px;
-            margin-bottom: 24px;
+    .game-articl {
+        width: 343px;
+        border-radius: 30px;
+        opacity: 1;
+        flex-direction: column;
+        gap: 0px;
+        margin-bottom: 24px;
+        
+        
 
-            &:nth-child(1) {
-                height: 528.629638671875px;
-            }
+        &:nth-child(1), 
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(4),
+        &:nth-child(6)
+         {
+            height: 626px;
+        }
 
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(5) {
-                height: 567.63px;
-            }
-
-            &:nth-child(4) {
-                height: 606.63px;
-            }
-
-            &:nth-child(6) {
-                height: 626.63px;
-            }
+    
 
             &__image--desktop {
                 display: none;
